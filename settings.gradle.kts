@@ -1,12 +1,7 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -24,3 +19,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "CoinPulse"
 include(":app")
+include(":core:network")
+include(":core:nav")
+include(":uikit")
+include(":features:coins")
