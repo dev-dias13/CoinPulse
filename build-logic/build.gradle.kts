@@ -1,24 +1,31 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     `kotlin-dsl`
 }
 
 group = "dev.dias.coinpulse.buildlogic"
 
-dependencies {
-    implementation(libs.android.gradlePlugin)
-    implementation(libs.kotlin.gradlePlugin)
-    implementation(libs.ksp.gradlePlugin)
-    implementation(libs.room.gradlePlugin)
-    implementation("com.google.dagger:hilt-android-gradle-plugin:2.60.1")
-    implementation("org.jetbrains.kotlin:compose-compiler-gradle-plugin:2.1.0")
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
-// tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
-//     compilerOptions {
-//         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
-//     }
-// }
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
+}
 
+dependencies {
+    compileOnly(libs.android.gradlePlugin)
+    compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.ksp.gradlePlugin)
+    compileOnly(libs.room.gradlePlugin)
+    compileOnly(libs.hiltGradlePlugin)
+    compileOnly(libs.kotlinCompose.gradlePlugin)
+}
 
 gradlePlugin {
     plugins {

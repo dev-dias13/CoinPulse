@@ -1,5 +1,6 @@
 plugins {
     id("coinpulse.android.library")
+    id("coinpulse.android.compose")
 }
 
 android {
@@ -7,5 +8,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.navigation.compose)
+    api(libs.androidx.navigation3.runtime)
+    api(libs.androidx.navigation3.ui)
+    api(libs.androidx.lifecycle.viewmodel.navigation3)
 }
