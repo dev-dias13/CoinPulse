@@ -83,7 +83,7 @@ Not before M3 is closed. Order within the milestone is flexible.
 | AND-0029 | Settings: theme, display currency (DataStore) | feat |
 | AND-0030 | Screenshot tests (Roborazzi) in CI | chore |
 | AND-0031 | Baseline Profile | chore |
-
+| AND-0032 | Branch ruleset for `main`: require PR, block force pushes and deletions | chore | done |
 ---
 
 ## Notes
