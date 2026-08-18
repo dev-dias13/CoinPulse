@@ -1,7 +1,7 @@
 plugins {
     id("coinpulse.android.library")
     id("coinpulse.android.hilt")
-    kotlin("plugin.serialization")
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {

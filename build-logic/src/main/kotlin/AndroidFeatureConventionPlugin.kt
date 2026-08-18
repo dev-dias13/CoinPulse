@@ -9,7 +9,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
         with(target) {
             pluginManager.apply("coinpulse.android.library")
             pluginManager.apply("coinpulse.android.hilt")
-
+            pluginManager.apply("coinpulse.android.compose")
             val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
             dependencies {
                 add("implementation", project(":uikit"))

@@ -1,6 +1,5 @@
 plugins {
     id("coinpulse.android.feature")
-    id("coinpulse.android.compose")
 }
 
 android {
